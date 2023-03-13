@@ -1,0 +1,51 @@
+﻿create table "Role"(
+    "RoleName" varchar primary key
+);
+
+create table "Group"(
+    "NumbersGroup" varchar primary key
+);
+
+create table "Account"(
+                          "Login" varchar primary key,
+                          "Password" varchar,
+                          "FirstName" varchar,
+                          "LastName" varchar,
+                          "Patronymic" varchar,
+                          "Role" varchar,
+                          "Group" varchar,
+                          foreign key ("Role") references "Role"("RoleName"),
+                          foreign key ("Group") references "Group"("NumbersGroup")
+);
+
+create table "Forms"(
+    "IdForms" serial primary key ,
+    "Teacher" varchar,
+    "Name" varchar,
+    foreign key ("Teacher") references "Account"("Login")
+);
+
+create table "QuestionType"(
+    "Name" varchar primary key
+);
+
+create table "Question"(
+    "IdQuestion" serial primary key,
+    "Forms" varchar,
+    "QuestionType" varchar,
+    "Answer" varchar,
+    foreign key ("IdQuestion") references "Forms"("IdForms"),
+    foreign key ("QuestionType") references "QuestionType"("Name")
+);
+
+
+
+create table "Answer"(
+                         "Id" int primary key,
+                         "Student" varchar,
+                         "Questions" integer,
+                         "Content" varchar,
+                         "Data" timestamp,
+                         foreign key ("Id") references "Question"("IdQuestion"),
+                         foreign key ("Student") references "Account"("Login")
+);
