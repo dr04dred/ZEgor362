@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="TextBoxLogin" ></TextBox>
-        <PasswordBox></PasswordBox>
-        <Button Margin="70,287,70,127" Name="LoginButton">Login
-        </Button>
-        <Button Margin="70,333,70,83" Click="ButtonRegistration_Click">Registration
-        </Button>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="550">
+            <TextBox x:Name="TextBoxLogin" Margin="10"/>
+            <PasswordBox x:Name="PasswordBox" Margin="10" />
+            <Button Margin="10" Content="Login" Name="LoginButton"/>
+            <Button Margin="10" Content="Registretion"  Click="ButtonRegistration_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

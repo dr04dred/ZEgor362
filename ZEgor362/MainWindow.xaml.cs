@@ -24,7 +24,14 @@ namespace ZEgor362
 
         private void ButtonRegistration_Click(object sender, RoutedEventArgs e)
         {
-            string
+
+
+            if (TextBoxLogin.Text.Length == 0) return;
+            if (PasswordBox.Password.Length == 0) return;
+
+            string login = TextBoxLogin.Text.Trim();
+            string pass = PasswordBox.Password.Trim().ToLower();
+
         }
     }
 }
