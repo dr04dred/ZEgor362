@@ -15,15 +15,19 @@ using System.Windows.Shapes;
 
 namespace ZEgor362
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Логика взаимодействия для RegistrationPage.xaml
+    /// </summary>
+    public partial class RegistrationPage : Page
     {
-        public MainWindow()
+        public RegistrationPage()
         {
             InitializeComponent();
-
-            PrimaryPage.Navigate(new AuthorizationPage());
         }
 
-       
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AuthorizationPage());
+        }
     }
 }
