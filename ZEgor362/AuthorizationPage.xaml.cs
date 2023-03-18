@@ -32,6 +32,7 @@ namespace ZEgor362
             string login = TextBoxLogin.Text.Trim();
             string pass = PassBox.Password.Trim().ToLower();
 
+            NavigationService.Navigate(new BlankPage());
         }
 
         private void ButtonRegistration(object sender, RoutedEventArgs e)

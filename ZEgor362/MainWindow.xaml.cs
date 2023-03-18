@@ -12,15 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using NpgsqlTypes;
+using ZEgor362.Class;
 
 namespace ZEgor362
 {
     public partial class MainWindow : Window
     {
+        public static string host = "10.14.206.28";
+        public static int port = 5432;
+        public static string user = "student";
+        public static string pass = "1234";
+        public static string ddatabase = "postgres";
+
+
+
+        //private Connection connection = new Connection();
+
         public MainWindow()
         {
             InitializeComponent();
-
+            Connection.Connecting(host.ToString(),port,user.ToString(),pass.ToString(), ddatabase.ToString());
             PrimaryPage.Navigate(new AuthorizationPage());
         }
 
