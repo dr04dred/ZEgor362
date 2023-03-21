@@ -8,5 +8,10 @@ namespace ZEgor362.Class
 {
     internal class Role
     {
+        public Role(string name_role) 
+        {
+            Name_Role = name_role;
+        }
+        public string Name_Role { get; set;}
     }
 }

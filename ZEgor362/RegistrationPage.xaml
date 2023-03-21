@@ -11,17 +11,21 @@
     <Grid Background="#99958C">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="550">
             <Label Content="Login"></Label>
-            <TextBox x:Name="TextBoxLogin"  Margin="3"/>
-            <Label Content="NSP"></Label>
-            <TextBox x:Name="TextBoxNSP" Margin="3"/>
+            <TextBox x:Name="Login"  Margin="3"/>
             <Label Content="Password"></Label>
-            <PasswordBox x:Name="PasswordBox" Margin="3" />
+            <PasswordBox x:Name="Password" Margin="3" />
+            <Label Content="FirstName"></Label>
+            <TextBox x:Name="FirstName" Margin="3"/>
+            <Label Content="Secondname"></Label>
+            <TextBox x:Name="Secondname" Margin="3"/>
+            <Label Content="Patronymic"></Label>
+            <TextBox x:Name="Patronymic" Margin="3"/>
             <Label Content="Role"></Label>
             <ComboBox x:Name="Role" Margin="3"></ComboBox>
             <Label Content="Group"></Label>
-            <TextBox x:Name="Group" Margin="3"></TextBox>
+            <ListBox x:Name="Group" Margin="3" Height="15"></ListBox>
             <Button Margin="10" Content="Login" Click="Button_Click"/>
-            <Button Margin="10" Content="Register"/>
+            <Button Margin="10" Content="Register" Click="Reg"/>
         </StackPanel>
     </Grid>
 </Page>

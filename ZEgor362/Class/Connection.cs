@@ -11,16 +11,33 @@ namespace ZEgor362.Class
     {
         private static NpgsqlConnection connection;
 
-        public static void Connecting(string host, int port, string username, string password, string database) 
+        public static void Connecting(string host, string port, string database, string username, string password) 
         {
-            string cs = string.Format("Server={0}; Port={1};User ID={2}; Password={3}; DataBase={4}", host, port, username, password, database);
-            connection = new NpgsqlConnection(cs);
+            Host = host;
+            Port = port;
+            Username = username;
+            Password = password;
+            Database = database;
+
+
+            connection= new NpgsqlConnection
+                (string.Format("Server={0}; Port={1};User ID={2}; Password={3}; DataBase={4}", Host, Port, Username, Password, Database));
             connection.Open();
-          
         }
 
+        public static NpgsqlCommand ExecuteComand(string sql)
+        {
+            NpgsqlCommand comand = new NpgsqlCommand();
+            comand.Connection = connection;
+            comand.CommandText = sql;
+            return comand;
+        }
 
-
+        public static string Host { get; set; }
+        public static string Port { get; set; }
+        public static string Username { get; set; }
+        public static string Password { get; set; } 
+        public static string Database { get; set; }
 
     }
 }

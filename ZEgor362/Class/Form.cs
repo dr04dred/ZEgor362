@@ -8,5 +8,15 @@ namespace ZEgor362.Class
 {
     internal class Form
     {
+        public Form(int id, string name, string teacher)
+        {
+            Id = id;
+            Name = name;
+            Teacher = teacher;
+        }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Teacher { get; set;
+        }
     }
 }
