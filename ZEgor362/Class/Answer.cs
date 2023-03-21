@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZEgor362.Class
 {
-    internal class Answer
+    public class Answer
     {
         public Answer(int id, string student, string question, string content, string date) 
         {

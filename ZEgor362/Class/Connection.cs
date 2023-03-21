@@ -7,9 +7,9 @@ using Npgsql;
 
 namespace ZEgor362.Class
 {
-    internal class Connection
+    public class Connection
     {
-        private static NpgsqlConnection connection;
+        public static NpgsqlConnection connection;
 
         public static void Connecting(string host, string port, string database, string username, string password) 
         {

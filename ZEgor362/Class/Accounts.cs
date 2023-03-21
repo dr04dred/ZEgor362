@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZEgor362.Class
 {
-    internal class Accounts
+    public class Accounts
     {
         public Accounts(string login, string password, string firstname, string lastname, string patronymic, string role, string group)
         {

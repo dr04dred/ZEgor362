@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ZEgor362.Class
 {
-    internal class Questiontupe
+    public class QuestionType
     {
-        public Questiontupe(string name_type) 
+        public QuestionType(string name_type) 
         {
             Name_Type = name_type;
         }

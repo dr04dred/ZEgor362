@@ -112,10 +112,11 @@
     <Compile Include="Class\Accounts.cs" />
     <Compile Include="Class\Answer.cs" />
     <Compile Include="Class\Class.cs" />
+    <Compile Include="Class\DataLoader.cs" />
     <Compile Include="Class\Form.cs" />
     <Compile Include="Class\Connection.cs" />
     <Compile Include="Class\Question.cs" />
-    <Compile Include="Class\Questiontupe.cs" />
+    <Compile Include="Class\QuestionType.cs" />
     <Compile Include="Class\Role.cs" />
     <Compile Include="RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>

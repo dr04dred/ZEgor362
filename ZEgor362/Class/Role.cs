@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZEgor362.Class
 {
-    internal class Role
+    public class Role
     {
         public Role(string name_role) 
         {

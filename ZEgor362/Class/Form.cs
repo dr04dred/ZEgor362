@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZEgor362.Class
 {
-    internal class Form
+    public class Form
     {
         public Form(int id, string name, string teacher)
         {
