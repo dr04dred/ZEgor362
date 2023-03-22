@@ -29,16 +29,10 @@ namespace ZEgor362
 
             DataLoader.Load();
 
-            Group.SetBinding(ComboBox.InputScopeProperty, new Binding()
+            Group.SetBinding(ItemsControl.ItemsSourceProperty, new Binding()
            {
                 Source = DataLoader.Groups
            });
-        }
-
-
-        internal static void GetList(ObservableCollection<Group> groups)
-        {
-            throw new NotImplementedException();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -54,19 +48,19 @@ namespace ZEgor362
             string secondname = Secondname.Text.Trim();
             string patronymic = Patronymic.Text.Trim();
             string role = "Student";
-            var group = Group.SelectedItem as Group;
+            var group = Group.SelectedItem as Class.Group;
 
 
-            if (login == "" || password == "" || firstname == "" || secondname == "" || patronymic == "" || role == "" || group == null) return;
+            if (login == "" || password == "" || firstname == "" || secondname == "" || patronymic == "" || group == null) return;
 
-            var command = Connection.ExecuteComand(" INSERT INTO \"account\"(login, password, firstname, secondname, patronymic, \"role\", \"class\") VALUES(@a, @b, @c, @e, @f, @g)");
+            var command = Connection.ExecuteComand(" INSERT INTO \"account\" VALUES(@a, @b, @c, @e, @f, @g)");
             command.Parameters.AddWithValue("@a", NpgsqlDbType.Varchar,login);
             command.Parameters.AddWithValue("@b", NpgsqlDbType.Varchar,password);
             command.Parameters.AddWithValue("@c", NpgsqlDbType.Varchar, firstname);
             command.Parameters.AddWithValue("@d", NpgsqlDbType.Varchar, secondname);
             command.Parameters.AddWithValue("@e", NpgsqlDbType.Varchar, patronymic);
-            command.Parameters.AddWithValue("@f", NpgsqlDbType.Varchar, "student");
-            command.Parameters.AddWithValue("@g", NpgsqlDbType.Varchar, group);
+            command.Parameters.AddWithValue("@f", NpgsqlDbType.Varchar, "Student");
+            command.Parameters.AddWithValue("@g", NpgsqlDbType.Varchar, group.Groups );
 
             var result = command.ExecuteNonQuery();
             if (result == 1) return;
@@ -80,21 +74,21 @@ namespace ZEgor362
 
         }
 
-        //public static void GetList(ObservableCollection<Group> List) 
-        //{
-        //    var command = Connection.ExecuteComand("SELECTET \"name_class\" FROM \"Class\"");
+        public static void GetList(ObservableCollection<Class. Group> List)
+        {
+            var command = Connection.ExecuteComand("SELECT \"name_class\" FROM \"class\"");
 
-        //    var result = command.ExecuteReader();
-        //    if (result.HasRows)
-        //    {
-        //        List.Clear();
-        //        while (result.Read())
-        //        {
-        //            List.Add(new Group(result.GetString(0)));
-        //        }
-        //    }
-        //    result.Close();
-        //}
+            var result = command.ExecuteReader();
+            if (result.HasRows)
+            {
+                List.Clear();
+                while (result.Read())
+                {
+                    List.Add(new Class.Group(result.GetString(0)));
+                }
+            }
+            result.Close();
+        }
 
     }
 }

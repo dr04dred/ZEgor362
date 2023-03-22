@@ -11,7 +11,7 @@ namespace ZEgor362.Class
     public class DataLoader
     {
         public static ObservableCollection<Role> Roles { get; set; }
-        public static ObservableCollection<Class> Groups { get; set; }
+        public static ObservableCollection<Group> Groups { get; set; }
         public static ObservableCollection<QuestionType> QuestionTypes { get; set; }
 
         public static void Load()
@@ -19,11 +19,11 @@ namespace ZEgor362.Class
             if (Roles == null)
                 Roles = new ObservableCollection<Role>();
             if (Groups == null)
-                Groups = new ObservableCollection<Class>();
+                Groups = new ObservableCollection<Group>();
             if (QuestionTypes == null)
                 QuestionTypes = new ObservableCollection<QuestionType>();
 
-           // RegistrationPage.GetList(Groups);
+            RegistrationPage.GetList(Groups);
             //BlankPage.GetType(QuestionTypes);
         }
         

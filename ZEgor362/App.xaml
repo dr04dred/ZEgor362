@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:ZEgor362"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <DataTemplate x:Key="GroupTemplate">
+            <TextBlock>
+                <Run Text="{Binding Groups}"/>
+            </TextBlock>            
+        </DataTemplate>
+        
+        
     </Application.Resources>
 </Application>

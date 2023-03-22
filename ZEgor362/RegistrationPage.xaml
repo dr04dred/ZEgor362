@@ -23,7 +23,7 @@
             <Label Content="Role"></Label>
             <ComboBox x:Name="Role" Margin="3"></ComboBox>
             <Label Content="Group"></Label>
-            <ListBox x:Name="Group" Margin="3" Height="15"></ListBox>
+            <ComboBox x:Name="Group" Margin="3" Height="15" ItemTemplate="{DynamicResource ResourceKey= GroupTemplate}"></ComboBox>
             <Button Margin="10" Content="Login" Click="Button_Click"/>
             <Button Margin="10" Content="Register" Click="Reg"/>
         </StackPanel>

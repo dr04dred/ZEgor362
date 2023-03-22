@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace ZEgor362.Class
 {
-    public class Class
+    public class Group
     {
-        public Class(string groups) 
+        public Group(string groups) 
         {
 
-            Group = groups;
+            Groups = groups;
 
         }
-        public string Group { get; set; }
+        public string Groups { get; set; }
     }
 }

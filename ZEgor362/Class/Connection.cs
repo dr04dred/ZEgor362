@@ -21,7 +21,7 @@ namespace ZEgor362.Class
 
 
             connection= new NpgsqlConnection
-                (string.Format("Server={0}; Port={1};User ID={2}; Password={3}; DataBase={4}", Host, Port, Username, Password, Database));
+                (string.Format("Server={0}; Port={1};DataBase={2}; User ID={3}; Password={4}", Host, Port, Database, Username, Password));
             connection.Open();
         }
 

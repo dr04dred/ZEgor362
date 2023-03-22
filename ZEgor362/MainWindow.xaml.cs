@@ -23,7 +23,7 @@ namespace ZEgor362
         {
             InitializeComponent();
             Connection.Connecting("10.14.206.28", "5432", "postgres", "student", "1234");
-
+            
             PrimaryPage.Navigate(new AuthorizationPage());
         }
 

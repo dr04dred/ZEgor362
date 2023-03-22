@@ -111,7 +111,7 @@
     </Compile>
     <Compile Include="Class\Accounts.cs" />
     <Compile Include="Class\Answer.cs" />
-    <Compile Include="Class\Class.cs" />
+    <Compile Include="Class\Group.cs" />
     <Compile Include="Class\DataLoader.cs" />
     <Compile Include="Class\Form.cs" />
     <Compile Include="Class\Connection.cs" />
