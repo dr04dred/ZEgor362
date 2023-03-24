@@ -10,7 +10,13 @@
                 <Run Text="{Binding Groups}"/>
             </TextBlock>            
         </DataTemplate>
-        
+
+
+        <DataTemplate x:Key="RoleTemplate">
+            <TextBlock>
+                <Run Text="{Binding Roles}"/>
+            </TextBlock>
+        </DataTemplate>
         
     </Application.Resources>
 </Application>

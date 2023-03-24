@@ -24,8 +24,10 @@ namespace ZEgor362.Class
                 QuestionTypes = new ObservableCollection<QuestionType>();
 
             RegistrationPage.GetList(Groups);
+            RegistrationPage.GetList(Roles);
             //BlankPage.GetType(QuestionTypes);
         }
         
     }
+
 }

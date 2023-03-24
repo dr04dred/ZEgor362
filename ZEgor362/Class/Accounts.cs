@@ -23,9 +23,11 @@ namespace ZEgor362.Class
         public string Password { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }
-        public string Patronymic { get;set; }
+        public string Patronymic { get; set; }
         public string Role { get; set; }
         public string Group { get; set; }
 
+        public Role RoleReference  { get; set; }
+        public Group GroupReference { get; set; }
     }
 }

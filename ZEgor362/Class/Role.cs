@@ -10,8 +10,10 @@ namespace ZEgor362.Class
     {
         public Role(string name_role) 
         {
-            Name_Role = name_role;
+            Roles = name_role;
         }
-        public string Name_Role { get; set;}
+        public string Roles { get; set;}
+
+       //public string AccaountsReference { get; set;}
     }
 }
